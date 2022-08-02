@@ -37,12 +37,12 @@ function Formulario({ addTodo }) {
     //       });
     //       return;
     // }
-    Swal.fire({
-      title: "Great!",
-      text: "Added task",
-      icon: "success",
-      confirmButtonText: "Ok",
-    });
+    // Swal.fire({
+    //   title: "Great!",
+    //   text: "Added task",
+    //   icon: "success",
+    //   confirmButtonText: "Ok",
+    // });
     addTodo({
       name: name,
       //description: description,

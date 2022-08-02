@@ -3,7 +3,7 @@ import Formulario from "./Formulario";
 import TodosContainer from "./TodosContainer";
 
 function App() {
-  const [todo, setTodo] = useState([]);
+  const [todos, setTodo] = useState([]);
 
   const addTodo = (todo) => {
     setTodo((old) => [...old, todo]);
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Formulario addTodo={addTodo} />
-      {todo.length > 0 && <TodosContainer list={todo} />}
+      {todos.length > 0 && <TodosContainer list={todos} />}
     </>
   );
 }
