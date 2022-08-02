@@ -53,3 +53,7 @@
   color: white;
   /* align-self: center; */
 }
+
+.buttonText{
+  font-weight: bold;
+}
