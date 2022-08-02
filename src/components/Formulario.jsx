@@ -66,10 +66,14 @@ function Formulario({addTodo}) {
  
     return (
      <>
+        
+        {/* <div className="container">
+        <div className="formContainer">
+
         <h3>Agregar TODO</h3>
         <form className="formTodo" onSubmit={handleSubmit}>
             <input type="text"
-            className="form"
+            className="formInput"
             name="name"
             placeholder="Enter todo name"
             value={name}
@@ -77,11 +81,12 @@ function Formulario({addTodo}) {
             />
             <textarea 
             placeholder="Enter description"
+            className="formInput"
             name="description"
             value={description}
             onChange= {handleChange}
             />
-            <select name="condition" className="form-select" value={condition} onChange= {handleChange} >
+            <select name="condition" className="form-select formInput" value={condition} onChange= {handleChange} >
                 <option value="Pendiente">Pending</option>
                 <option value="Done">Done</option>
             </select>
@@ -93,6 +98,27 @@ function Formulario({addTodo}) {
             </div>
             <button type="submit" className="button">ADD</button>
         </form>
+        </div>
+        </div> */}
+
+
+<div className="container">
+        <div className="formContainer">
+
+        <h3>Agregar TODO</h3>
+        <form className="formTodo2" onSubmit={handleSubmit}>
+            <input type="text"
+            className="formInput"
+            name="name"
+            placeholder="Enter todo name"
+            value={name}
+            onChange= {handleChange}
+            />
+        
+            <button type="submit" className="button">ADD</button>
+        </form>
+        </div>
+        </div>
      </>
     );
   }

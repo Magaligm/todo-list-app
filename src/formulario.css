@@ -1,19 +1,55 @@
 * {
+  margin: 0;
     box-sizing: border-box;
+
   }
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  width: 400px;
+}
 
 .formTodo{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
 }
 
+.formTodo2{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  align-items: center;
+  /* width: 80%; */
+ 
+}
+
+.formInput{
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  flex: 1
+}
+
+.checkbox-input{
+  margin: 5px;
+}
+
 .button{
-  width: 50%;
-  margin: 10px 0;
+  /* width: 50%; */
+  /* margin: 10px 0; */
   border-width: 1px;
-  padding: 5px;
-  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+  background-color: rgba(45, 151, 193, 0.783);
+  color: white;
+  /* align-self: center; */
 }
