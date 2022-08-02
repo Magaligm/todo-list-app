@@ -2,17 +2,17 @@ import { useState } from "react";
 import Formulario from "./Formulario";
 
 function App() {
+  const [todo, setTodo] = useState([]);
 
-const [todo, setTodo] = useState([])
-
-const addTodo = todo => {
-  setTodo((old) =>[...old, todo])
-}
+  const addTodo = (todo) => {
+    console.log(todo);
+    setTodo((old) => [...old, todo]);
+  };
 
   return (
     <>
-      <Formulario addTodo={addTodo}/>
-      </>
+      <Formulario addTodo={addTodo} />
+    </>
   );
 }
 
