@@ -25,16 +25,16 @@ function Formulario({addTodo}) {
               });
               return;
         }
-        if(!description.trim()){        
-            e.target[1].focus()
-            Swal.fire({
-                title: 'Error!',
-                text: 'You have to put something',
-                icon: 'error',
-                confirmButtonText: 'Ok'
-              });
-              return;
-        }
+        // if(!description.trim()){        
+        //     e.target[1].focus()
+        //     Swal.fire({
+        //         title: 'Error!',
+        //         text: 'You have to put something',
+        //         icon: 'error',
+        //         confirmButtonText: 'Ok'
+        //       });
+        //       return;
+        // }
         Swal.fire({
             title: 'Great!',
             text: 'Added task',
@@ -43,10 +43,10 @@ function Formulario({addTodo}) {
           });
           addTodo({
              name: name,
-             description: description,
-             condition: condition === "pending" ? false : true,
-             priority: priority,
-             id: Date.now()
+             //description: description,
+             //condition: condition === "pending" ? false : true,
+            //  priority: priority,
+            id: Date.now()
 
             }) //una vez que hago las validaciones lo envio aca
         console.log(todo)
@@ -115,7 +115,7 @@ function Formulario({addTodo}) {
             onChange= {handleChange}
             />
         
-            <button type="submit" className="button">ADD</button>
+            <button type="submit" className="button"><text className="buttonText"> ADD </text></button>
         </form>
         </div>
         </div>

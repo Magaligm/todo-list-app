@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "./Formulario";
+import TodosContainer from "./TodosContainer";
 
 function App() {
 
@@ -12,6 +13,8 @@ const addTodo = todo => {
   return (
     <>
       <Formulario addTodo={addTodo}/>
+      {todo.length>0 && <TodosContainer list={todo} />}
+      
       </>
   );
 }
