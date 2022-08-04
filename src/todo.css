@@ -10,9 +10,10 @@
   margin-top: 5px;
   padding: 10px;
 }
-.btn-danger {
+.btn-danger,
+.edit {
   text-decoration: none;
- 
+
   margin-left: 3px;
   background-color: transparent;
   border: 0px;
