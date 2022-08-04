@@ -2,13 +2,18 @@
   text-decoration: line-through;
 }
 .container-activities {
+  width: 300px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 5px;
+  padding: 10px;
 }
 .btn-danger {
   text-decoration: none;
+ 
   margin-left: 3px;
+  background-color: transparent;
+  border: 0px;
 }

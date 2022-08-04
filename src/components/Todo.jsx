@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../todo.css";
 import { FaTrash } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
-function Todo({ id, todo, deleteTodo }) {
+
+// function Todo({ id, todo, deleteTodo }) {
+    function Todo({ todo, deleteTodo }) {
   const [done, setDone] = useState(false);
 
   function handleChange() {
@@ -10,7 +13,10 @@ function Todo({ id, todo, deleteTodo }) {
   }
 
   return (
+    <div className="container">
+
     <div className="container-activities">
+        <div>
       <input
         className="checkbox-input"
         type="checkbox"
@@ -19,12 +25,14 @@ function Todo({ id, todo, deleteTodo }) {
         value={done}
         onChange={handleChange}
       />
-      <text className={done && "isDone"}>{todo.name}</text>
-      <div>
-        <button className="btn-danger" onClick={() => deleteTodo(id)}>
-          <FaTrash />
-        </button>
+      <span className={done? "isDone": ""}>{todo.name}</span>
       </div>
+        <button className="btn-danger" onClick={() => deleteTodo(todo.id)}>
+      
+          <FaTrash    color="#cc4f4ffc" size={15}/>
+     
+        </button>
+    </div>
     </div>
   );
 }

@@ -11,6 +11,7 @@ function TodoList() {
   };
 
   const deleteTodo = (id) => {
+    console.log(id)
     setTodos((old) => old.filter((item) => item.id !== id)); //me traigo la lista que tengo y comparo que sea igual para qe me lo elimine
   };
 
