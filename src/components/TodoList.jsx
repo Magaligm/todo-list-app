@@ -5,6 +5,9 @@ import Todo from "./Todo";
 function TodoList() {
   const [todos, setTodos] = useState([]);
 
+  const [editingTodo, setEditingTodo] = useState(false);
+  const [editingText, setEditingText] = useState("");
+
   const addTodo = (todo) => {
     setTodos((old) => [...old, todo]);
   };
@@ -14,14 +17,17 @@ function TodoList() {
     setTodos((old) => old.filter((item) => item.id !== id)); //me traigo la lista que tengo y comparo que sea igual para qe me lo elimine
   };
 
-  const editTodo = (id) => {
-    console.log("edit mode activated");
-
-    // const editTodos = todos.map((item) =>
-    //   item.id === id ? { ...item, item } : item
-    // );
-    // setTodos(editTodos);
-  };
+  function editTodo(id) {
+    const updateTodos = [...todos].map((todo) => {
+      if (todo.id === id) {
+        todo.text = editingText;
+      }
+      return todo;
+    });
+    setTodos(updateTodos);
+    setEditingTodo(null);
+    setEditingText("");
+  }
 
   return (
     <>
