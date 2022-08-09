@@ -4,11 +4,8 @@ import { FaTrash } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { FaPen } from "react-icons/fa";
 
-// function Todo({ id, todo, deleteTodo }) {
-function Todo({ todo, deleteTodo }) {
+function Todo({ todo, deleteTodo, todos, setTodos }) {
   const [done, setDone] = useState(false);
-
-  const [todos, setTodos] = useState([]);
 
   const [editingTodo, setEditingTodo] = useState(false);
   const [editingText, setEditingText] = useState("");
@@ -19,8 +16,9 @@ function Todo({ todo, deleteTodo }) {
 
   function editTodo(id) {
     const updateTodos = [...todos].map((todo) => {
+      console.log(todo);
       if (todo.id === id) {
-        todo.text = editingText;
+        todo.name = editingText;
       }
       return todo;
     });
@@ -49,9 +47,7 @@ function Todo({ todo, deleteTodo }) {
               onChange={(e) => setEditingText(e.target.value)}
               value={editingText}
             />
-          ) : (
-            <div>{todo.text}</div>
-          )}
+          ) : null}
         </div>
         <div className="buttons">
           <button className="btn-danger" onClick={() => deleteTodo(todo.id)}>
